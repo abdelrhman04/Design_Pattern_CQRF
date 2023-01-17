@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\School\Commands\AddSchool\" />
     <Folder Include="Services\Student\Commands\" />
     <Folder Include="Services\Student\Queries\" />
     <Folder Include="Services\Teacher\Commands\" />

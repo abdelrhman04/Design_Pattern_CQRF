@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 
-namespace BLL.Services.School.Queries
+namespace BLL.Services
 {
     public class GetSchoolQueryHandler : IRequestHandler<GetSchoolQuery, List<SchoolDTO>>
     {

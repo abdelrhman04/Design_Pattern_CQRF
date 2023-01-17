@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using BLL.Services.School.Queries;
+
+using BLL.Services;
 using CORE.DAL;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,8 @@ namespace BLL.Mapper
     {
         public Mapping()
         {
-            CreateMap<School, SchoolDTO>().ReverseMap();
+            CreateMap<School, SchoolDTO>().ReverseMap(); 
+            CreateMap<School, CreateSchoolCommand>().ReverseMap();
         }
         
     }

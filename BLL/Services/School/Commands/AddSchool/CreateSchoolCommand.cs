@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    public class SchoolDTO
+    public class CreateSchoolCommand : IRequest<SchoolDTO>
     {
-        public int Id { get; set; }
         public string Name { get; set; }
     }
 }

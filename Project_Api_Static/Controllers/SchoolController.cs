@@ -1,4 +1,5 @@
-﻿using BLL.Services.School.Queries;
+﻿
+using BLL.Services;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +22,13 @@ namespace Project_Api_Static.Controllers
             var dtos = await _mediator.Send(new GetSchoolQuery());
             return Ok(dtos);
           
+        }
+        [HttpPost("AddSchool", Name = "Add")]
+        public async Task<ActionResult<List<SchoolDTO>>> Add([FromBody] CreateSchoolCommand Add)
+        { 
+            var dtos = await _mediator.Send( Add );
+            return Ok(dtos);
+
         }
     }
 }

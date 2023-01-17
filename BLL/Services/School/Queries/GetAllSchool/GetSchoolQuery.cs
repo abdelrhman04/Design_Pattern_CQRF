@@ -5,9 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BLL.Services.School.Queries
+namespace BLL.Services
 {
     public class GetSchoolQuery : IRequest<List<SchoolDTO>>
     {
+
     }
 }
