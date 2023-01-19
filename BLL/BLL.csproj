@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Services\School\Commands\NewFolder - Copy\" />
-    <Folder Include="Services\School\Commands\NewFolder\" />
+    <Compile Remove="Services\School\Commands\NewFolder - Copy\**" />
+    <EmbeddedResource Remove="Services\School\Commands\NewFolder - Copy\**" />
+    <None Remove="Services\School\Commands\NewFolder - Copy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Services\Student\Commands\" />
     <Folder Include="Services\Student\Queries\" />
     <Folder Include="Services\Teacher\Commands\" />

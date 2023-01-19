@@ -16,6 +16,7 @@ namespace BLL.Mapper
         {
             CreateMap<School, SchoolDTO>().ReverseMap(); 
             CreateMap<School, CreateSchoolCommand>().ReverseMap();
+            CreateMap<School, UpdateSchoolCommand>().ReverseMap();
         }
         
     }

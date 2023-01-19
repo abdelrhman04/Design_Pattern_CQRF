@@ -9,6 +9,7 @@ namespace BLL
         Task<IReadOnlyList<TEntity>> ListAllAsync();
         Task<TEntity> AddAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
+        Task<TEntity> UpdateAsync_Return(TEntity entity);
         Task DeleteAsync(TEntity entity);
         Task<IReadOnlyList<TEntity>> GetAllAsync(ISpecification<TEntity> spec);
         Task<TEntity> GetByIdAsync(int id, ISpecification<TEntity> spec);

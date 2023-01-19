@@ -38,5 +38,20 @@ namespace Project_Api_Static.Controllers
             return Ok(dtos);
 
         }
+        [HttpPost("updateSchool", Name = "update")]
+        public async Task<ActionResult<SchoolDTO>> update([FromBody] UpdateSchoolCommand Update)
+        {
+            var dtos = await _mediator.Send(Update);
+            return Ok(dtos);
+
+        }
+        [HttpDelete("delete", Name = "delete")]
+        public async Task<ActionResult<SchoolDTO>> delete(int id)
+        {
+            var Add = new DeleteSchoolCommand() { Id = id };
+            var dtos = await _mediator.Send(Add);
+            return Ok(dtos);
+
+        }
     }
 }

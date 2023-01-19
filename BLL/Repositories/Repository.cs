@@ -43,8 +43,15 @@ namespace BLL
         {
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
+            
         }
+        public async Task<TEntity> UpdateAsync_Return(TEntity entity)
+        {
+            _context.Entry(entity).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return entity;
 
+        }
         public async Task DeleteAsync(TEntity entity)
         {
             _context.Set<TEntity>().Remove(entity);
