@@ -17,7 +17,7 @@ builder.Services.AddDbContext<MyContext>(options =>
 });
 builder.Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-//builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+//builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly()); wrong
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 //builder.Services.AddMediatR(Assembly.GetExecutingAssembly()); Wrong
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());//true

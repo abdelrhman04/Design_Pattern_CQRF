@@ -17,11 +17,19 @@ namespace Project_Api_Static.Controllers
             _mediator = mediator;
         }
         [HttpGet("all", Name = "GetAllSchool")]
-        public async Task<ActionResult<List<SchoolDTO>>> Get()
+        public async Task<ActionResult<List<SchoolDTO>>> GetAll()
         {
             var dtos = await _mediator.Send(new GetSchoolQuery());
             return Ok(dtos);
           
+        }
+        [HttpGet("GetSchool", Name = "Get_")]
+        public async Task<ActionResult<SchoolDTO>> Get( int id)
+        {
+            var Add = new GetSchoolByIdQuery() { Id = id };
+            var dtos = await _mediator.Send(Add);
+            return Ok(dtos);
+
         }
         [HttpPost("AddSchool", Name = "Add")]
         public async Task<ActionResult<List<SchoolDTO>>> Add([FromBody] CreateSchoolCommand Add)

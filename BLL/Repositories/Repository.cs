@@ -73,5 +73,11 @@ namespace BLL
             return SpecificationEvaluator<TEntity>.GetQuery(_context.Set<TEntity>().AsQueryable(), spec);
 
         }
+
+        public async Task<TEntity> GetByIdAsync(Expression<Func<TEntity, bool>> value=null)
+        {
+            
+                return await  _context.Set<TEntity>().FirstOrDefaultAsync(value);
+        }
     }
 }

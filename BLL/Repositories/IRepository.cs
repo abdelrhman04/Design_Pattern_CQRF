@@ -13,5 +13,6 @@ namespace BLL
         Task<IReadOnlyList<TEntity>> GetAllAsync(ISpecification<TEntity> spec);
         Task<TEntity> GetByIdAsync(int id, ISpecification<TEntity> spec);
         Task<TEntity> GetEntityWithSpec(ISpecification<TEntity> spec);
+        Task<TEntity> GetByIdAsync(Expression<Func<TEntity, bool>> value = null);
     }
 }
